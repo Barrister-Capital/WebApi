@@ -136,10 +136,13 @@ namespace Microsoft.AspNet.OData.Formatter.Serialization
                     return GetEdmTypeSerializer(edmType);
                 }
             }
-            else
+            else if (type.IsGenericType() && EdmLibHelpers.IsDynamicTypeWrapper(type.GetGenericArguments()[0]))
             {
-                return null;
+                // $apply
+
+                return GetEdmTypeSerializer(path.Segments.OfType<EntitySetSegment>().FirstOrDefault().EdmType.ToEdmTypeReference(true));
             }
+            return null;
         }
     }
 }
