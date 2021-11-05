@@ -29,7 +29,9 @@ use that file path in the following:
 ```
 dotnet nuget push filePath --source "github"
 ```
-That should load the file into github, and you should be done!
+That should load the file into github!
+
+- once everything is done, run a final `git push --force` to push the rebased branch.
 
 
 # Details
