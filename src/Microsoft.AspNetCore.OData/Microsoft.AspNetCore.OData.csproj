@@ -1,5 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+  <PackageId>Barrister.Microsoft.AspNetCore.OData</PackageId>
+  <Version>7.5.11-b</Version>
+  <Authors>alibi</Authors>
+  <Company>Barrister</Company>
+  <RepositoryUrl>https://github.com/casepacer/mailmerge/</RepositoryUrl>
+</PropertyGroup>
+  <PropertyGroup>
     <TargetFrameworks>netcoreapp3.1;netstandard2.0</TargetFrameworks>
   </PropertyGroup>
   <Import Project="..\..\tools\WebStack.settings.targets" />
